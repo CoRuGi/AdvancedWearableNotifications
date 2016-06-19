@@ -23,4 +23,5 @@
     </string>
     <string name="extra_action_notification_sub_text">Extra action information</string>
     <string name="extra_action_notification_action_text">See on map</string>
+    <string name="extra_action_notification_location">Silicon Valley</string>
 </resources>

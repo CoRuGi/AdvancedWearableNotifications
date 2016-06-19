@@ -41,7 +41,9 @@ public class ExtraActionNotification {
          * Build an intent for an action to view a map
          */
         Intent mapIntent = new Intent(Intent.ACTION_VIEW);
-        Uri geoUri = Uri.parse("geo:37.3921697,-122.2751913,10.25z");
+        Uri geoUri = Uri.parse(
+                "geo:0,0?q=" + mContext.getString(R.string.extra_action_notification_location)
+        );
         mapIntent.setData(geoUri);
         PendingIntent mapPendingIntent =
                 PendingIntent.getActivity(mContext, 0, mapIntent, 0);
