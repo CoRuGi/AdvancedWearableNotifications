@@ -1,15 +1,18 @@
 # Advanced Wearable Notifications
 
-A simple app that shows some examples of how to customize the notifications shown on an Android
-Wearable device.
+A simple app that shows some examples of how to customize the
+notifications shown on an Android Wearable device.
 
-# Installation
+## Installation
 
 1. Install Android Studio
-2. New -> Project From Verion Control -> Github
+2. New -> Project From Version Control -> GitHub
 3. Use the above URL as the Repository URL
+4. Setup your wearable to receive notifications. U can use this guide as a
+guidance: [Creating and Running a Wearable App]
+(https://developer.android.com/training/wearables/apps/creating.html)
 
-# License
+## License
 
 Copyright 2016 Coen Rundberg
 
