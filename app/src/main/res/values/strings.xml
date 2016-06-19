@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Advanced Wearable Notifications</string>
+
+    <!-- Main activity -->
+    <string name="Text_view_standard_notification">
+        Launch a Standard Notification with a notification\'s \"action\". This action will send a
+        browse intent with the url of the Notification docs on developer.android.com.
+        \n\nIt will both be displayed on the phone and on the Wear device as a standard
+        notification.
+    </string>
+    <string name="button_standard_notification">Launch Standard Notification</string>
 </resources>
