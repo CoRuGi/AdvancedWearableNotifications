@@ -88,6 +88,7 @@ public class StandardNotification {
         /**
          * Send the notification. This will immediately display the notification icon in the
          * notification bar.
+         * Use the NotificationManagerCompat for support on older versions
          */
         NotificationManagerCompat notificationManager =
                 NotificationManagerCompat.from(mContext.getApplicationContext());
