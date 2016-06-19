@@ -21,4 +21,16 @@
         android:onClick="CreateStandardNotification"
         android:text="@string/button_standard_notification" />
 
+    <TextView
+        android:layout_marginTop="@dimen/main_activity_text_view_top_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Text_view_extra_action_notification" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="CreateExtraActionNotification"
+        android:text="@string/button_extra_action_notification" />
+
 </LinearLayout>

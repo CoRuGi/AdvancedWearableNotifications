@@ -10,11 +10,7 @@ import android.support.v4.app.NotificationManagerCompat;
 
 import com.androidnanodegree.cr.advancedwearablenotifications.R;
 
-/**
- * Most of the code is from the Basic Notification Sample provided by the samples of SDK 23
- */
-
-public class StandardNotification {
+public class ExtraActionNotification {
     /**
      * A numeric value that identifies the notification that we'll be sending.
      * This value needs to be unique within this app, but it doesn't need to be
@@ -27,12 +23,13 @@ public class StandardNotification {
      */
     private Context mContext;
 
-    public StandardNotification(Context context){
+    public ExtraActionNotification(Context context){
         mContext = context;
     }
 
-    public void show(){
-        /** Create an intent that will be fired when the user clicks the notification.
+    public void show() {
+        /**
+         * Create an intent that will be fired when the user clicks the notification.
          * The intent needs to be packaged into a {@link android.app.PendingIntent} so that the
          * notification service can fire it on our behalf.
          */
@@ -41,11 +38,21 @@ public class StandardNotification {
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, intent, 0);
 
         /**
+         * Build an intent for an action to view a map
+         */
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW);
+        Uri geoUri = Uri.parse("geo:37.3921697,-122.2751913,10.25z");
+        mapIntent.setData(geoUri);
+        PendingIntent mapPendingIntent =
+                PendingIntent.getActivity(mContext, 0, mapIntent, 0);
+
+        /**
          * Use NotificationCompat.Builder to set up our notification.
          */
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext);
 
-        /** Set the icon that will appear in the notification bar. This icon also appears
+        /**
+         * Set the icon that will appear in the notification bar. This icon also appears
          * in the lower right hand corner of the notification itself.
          *
          * Important note: although you can use any drawable as the small icon, Android
@@ -62,8 +69,9 @@ public class StandardNotification {
         // after the user taps it, rather than remaining until it's explicitly dismissed.
         builder.setAutoCancel(true);
 
+
         /**
-         *Build the notification's appearance.
+         * Build the notification's appearance.
          * Set the large icon, which appears on the left of the notification. In this
          * sample we'll set the large icon to be the same as our app icon. The app icon is a
          * reasonable default if you don't have anything more compelling to use as an icon.
@@ -81,9 +89,19 @@ public class StandardNotification {
          *    versions of Android prior to 4.2 will ignore this field, so don't use it for
          *    anything vital!
          */
-        builder.setContentTitle("Standard Notification Sample");
-        builder.setContentText("Time to learn about notifications!");
-        builder.setSubText("Tap to view documentation about notifications.");
+        builder.setContentTitle(mContext.getString(R.string.extra_action_notification_title));
+        builder.setContentText(mContext.getString(R.string.extra_action_notification_text));
+        builder.setSubText(mContext.getString(R.string.extra_action_notification_sub_text));
+
+        /**
+         * Add the action of the notification.
+         * This action will be shown in the notification and can be directly be executed by the user
+         */
+        builder.addAction(
+                R.drawable.ic_map_notification,
+                mContext.getString(R.string.extra_action_notification_action_text),
+                mapPendingIntent
+        );
 
         /**
          * Send the notification. This will immediately display the notification icon in the

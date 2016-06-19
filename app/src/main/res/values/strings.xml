@@ -5,8 +5,22 @@
     <string name="Text_view_standard_notification">
         Launch a Standard Notification with a notification\'s \"action\". This action will send a
         browse intent with the url of the Notification docs on developer.android.com.
-        \n\nIt will both be displayed on the phone and on the Wear device as a standard
+        \n\nIt will both be displayed on the phone and on the wear device as a standard
         notification.
     </string>
     <string name="button_standard_notification">Launch Standard Notification</string>
+    <string name="Text_view_extra_action_notification">
+        Launch a Notification with an additional action. The normal action will be to browse to an
+        URL, but there will be an extra option to see a place on a map.
+        \n\nThe extra action will be displayed on both the phone and on the wear device.
+    </string>
+    <string name="button_extra_action_notification">Launch Extra Action Notification</string>
+
+    <!-- Extra Action notification -->
+    <string name="extra_action_notification_title">Standard Action Notification</string>
+    <string name="extra_action_notification_text">
+        This is a notification with an extra action. The action will open a location on a map.
+    </string>
+    <string name="extra_action_notification_sub_text">Extra action information</string>
+    <string name="extra_action_notification_action_text">See on map</string>
 </resources>
