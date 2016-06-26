@@ -12,6 +12,7 @@ import com.androidnanodegree.cr.advancedwearablenotifications.R;
 
 /**
  * Most of the code is from the Basic Notification Sample provided by the samples of SDK 23
+ * Original code can be found at: https://github.com/googlesamples/android-BasicNotifications
  */
 
 public class StandardNotification {
@@ -32,7 +33,8 @@ public class StandardNotification {
     }
 
     public void show(){
-        /** Create an intent that will be fired when the user clicks the notification.
+        /**
+         * Create an intent that will be fired when the user clicks the notification.
          * The intent needs to be packaged into a {@link android.app.PendingIntent} so that the
          * notification service can fire it on our behalf.
          */
@@ -45,7 +47,8 @@ public class StandardNotification {
          */
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext);
 
-        /** Set the icon that will appear in the notification bar. This icon also appears
+        /**
+         * Set the icon that will appear in the notification bar. This icon also appears
          * in the lower right hand corner of the notification itself.
          *
          * Important note: although you can use any drawable as the small icon, Android
@@ -63,7 +66,7 @@ public class StandardNotification {
         builder.setAutoCancel(true);
 
         /**
-         *Build the notification's appearance.
+         * Build the notification's appearance.
          * Set the large icon, which appears on the left of the notification. In this
          * sample we'll set the large icon to be the same as our app icon. The app icon is a
          * reasonable default if you don't have anything more compelling to use as an icon.

@@ -10,13 +10,18 @@ import android.support.v4.app.NotificationManagerCompat;
 
 import com.androidnanodegree.cr.advancedwearablenotifications.R;
 
+/**
+ * Most of the code is from the Basic Notification Sample provided by the samples of SDK 23
+ * Original code can be found at: https://github.com/googlesamples/android-BasicNotifications
+ */
+
 public class ExtraActionNotification {
     /**
      * A numeric value that identifies the notification that we'll be sending.
      * This value needs to be unique within this app, but it doesn't need to be
      * unique system-wide.
      */
-    public static final int NOTIFICATION_ID = 1;
+    public static final int NOTIFICATION_ID = 2;
 
     /**
      * A member variable to store the context given by the constructor of this class
