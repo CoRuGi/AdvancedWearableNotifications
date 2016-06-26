@@ -82,4 +82,23 @@
         notification on the wearable device.
     </string>
 
+    <!-- Multi Notifications -->
+    <string name="text_view_multi_notification">
+        When creating notifications for a handheld device, you should always aggregate similar
+        notifications into a single summary notification. However, a summary notification is less
+        useful on an Android wearable because users are not able to read details from each message
+        on the wearable. So for the wearable device, you should group all the notifications together
+        in a stack. The stack of notifications appears as a single card, which users can expand to
+        view the details from each notification separately.
+    </string>
+    <string name="button_multi_notification">Launch Multi Notifications</string>
+    <string name="multi_notification_title">2 new messages</string>
+    <string name="multi_notification_sub_text">Multi Notifications information</string>
+    <string name="multi_notification_new_mail">New mail from </string>
+    <string name="multi_notification_mail_sender_1">Mickey</string>
+    <string name="multi_notification_mail_subject_1">Welcome to the first mail</string>
+    <string name="multi_notification_mail_sender_2">Minnie</string>
+    <string name="multi_notification_mail_subject_2">Welcome to the second mail</string>
+    <string name="multi_notification_mail_summary_text">johndoe@gmail.com</string>
+
 </resources>

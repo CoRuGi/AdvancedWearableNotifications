@@ -1,12 +1,12 @@
 package com.androidnanodegree.cr.advancedwearablenotifications;
 
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.androidnanodegree.cr.advancedwearablenotifications.util.BigStyleNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.ExtraActionNotification;
+import com.androidnanodegree.cr.advancedwearablenotifications.util.MultiNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.PagerNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.SimpleExtendedWearableNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.StandardNotification;
@@ -59,5 +59,14 @@ public class MainActivity extends AppCompatActivity {
         PagerNotification pagerNotification =
                 new PagerNotification(this);
         pagerNotification.show();
+    }
+
+    /**
+     * Launch the Multi Notifications
+     */
+    public void createMultiNotification(View view) {
+        MultiNotification multiNotification =
+                new MultiNotification(this);
+        multiNotification.show();
     }
 }

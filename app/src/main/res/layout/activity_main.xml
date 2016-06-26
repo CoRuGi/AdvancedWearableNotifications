@@ -73,6 +73,18 @@
             android:onClick="createPagerNotification"
             android:text="@string/button_pager_notification"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_activity_text_view_top_margin"
+            android:text="@string/text_view_multi_notification"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="createMultiNotification"
+            android:text="@string/button_multi_notification"/>
+
     </LinearLayout>
 
 </ScrollView>
