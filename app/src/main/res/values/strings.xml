@@ -11,6 +11,23 @@
     </string>
     <string name="button_standard_notification">Launch Standard Notification</string>
 
+    <!-- Big Style notification -->
+    <string name="text_view_big_style_notification">
+        Sometimes you have extra text you want to display in your notification. This can be done to
+        add a style to your notification. In this case we will use a BigTextStyle style to show a
+        bigger notification.
+    </string>
+    <string name="button_big_style_notification">Launch Big Style Notification</string>
+    <string name="big_style_notification_title">Big Style Notification</string>
+    <string name="big_style_notification_text">
+        This is a notification with a BigStyle style.
+    </string>
+    <string name="big_style_notification_sub_text">Big Style information</string>
+    <string name="big_style_notification_large_text">
+        This is a notification with an extra large area to show more text. This is useful when you
+        need to provide the user with more information in your notification.
+    </string>
+
     <!-- Extra Action notification -->
     <string name="text_view_extra_action_notification">
         Launch a Notification with an additional action. The normal action will be to browse to an

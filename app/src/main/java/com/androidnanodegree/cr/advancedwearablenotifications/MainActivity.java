@@ -1,9 +1,11 @@
 package com.androidnanodegree.cr.advancedwearablenotifications;
 
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.androidnanodegree.cr.advancedwearablenotifications.util.BigStyleNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.ExtraActionNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.SimpleExtendedWearableNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.StandardNotification;
@@ -22,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
     public void CreateStandardNotification(View view) {
         StandardNotification standardNotification = new StandardNotification(this);
         standardNotification.show();
+    }
+
+    /**
+     * Launch the Extra Action Notification
+     */
+    public void CreateBigTextStyleNotificaton(View view) {
+        BigStyleNotification bigStyleNotification = new BigStyleNotification(this);
+        bigStyleNotification.show();
     }
 
     /**

@@ -29,6 +29,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/main_activity_text_view_top_margin"
+            android:text="@string/text_view_big_style_notification"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="CreateBigTextStyleNotificaton"
+            android:text="@string/button_big_style_notification"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_activity_text_view_top_margin"
             android:text="@string/text_view_extra_action_notification"/>
 
         <Button
