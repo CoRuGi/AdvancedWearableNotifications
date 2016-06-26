@@ -1,7 +1,7 @@
 # Advanced Wearable Notifications
 
-A simple app that shows some examples of how to customize the
-notifications shown on an Android Wearable device.
+An Android app that shows some examples of how to customize the
+notifications shown on the phone and on Android Wearable devices.
 
 ## Installation
 
