@@ -64,4 +64,22 @@
         have the action to navigate directly to the location.
     </string>
 
+    <!-- Pager notification -->
+    <string name="text_view_pager_notification">
+        When you\'d like to provide more information without requiring users to open your app on
+        their handheld device, you can add one or more pages to the notification on the wearable.
+        The additional pages appear immediately to the right of the main notification card.
+    </string>
+    <string name="button_pager_notification">Launch Pager Notification</string>
+    <string name="pager_notification_title">Pager Notification</string>
+    <string name="pager_notification_text">
+        This is a notification with Pager functionality.
+    </string>
+    <string name="pager_notification_sub_text">Pager information</string>
+    <string name="pager_notification_second_page_title">Page 2</string>
+    <string name="pager_notification_large_text">
+        This is an extra page that shows extra information that would not fit in a normal
+        notification on the wearable device.
+    </string>
+
 </resources>

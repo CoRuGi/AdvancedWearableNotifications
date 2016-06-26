@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.androidnanodegree.cr.advancedwearablenotifications.util.BigStyleNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.ExtraActionNotification;
+import com.androidnanodegree.cr.advancedwearablenotifications.util.PagerNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.SimpleExtendedWearableNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.StandardNotification;
 
@@ -21,15 +22,15 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Launch the Standard Notification
      */
-    public void CreateStandardNotification(View view) {
+    public void createStandardNotification(View view) {
         StandardNotification standardNotification = new StandardNotification(this);
         standardNotification.show();
     }
 
     /**
-     * Launch the Extra Action Notification
+     * Launch the Big Style Notification
      */
-    public void CreateBigTextStyleNotificaton(View view) {
+    public void createBigTextStyleNotificaton(View view) {
         BigStyleNotification bigStyleNotification = new BigStyleNotification(this);
         bigStyleNotification.show();
     }
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Launch the Extra Action Notification
      */
-    public void CreateExtraActionNotification(View view) {
+    public void createExtraActionNotification(View view) {
         ExtraActionNotification extraActionNotification = new ExtraActionNotification(this);
         extraActionNotification.show();
     }
@@ -45,9 +46,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Launch the Simple Extended Wearable Notification
      */
-    public void CreateSimpleExtendedWearableNotification(View view) {
+    public void createSimpleExtendedWearableNotification(View view) {
         SimpleExtendedWearableNotification simpleExtendedWearableNotification =
                 new SimpleExtendedWearableNotification(this);
         simpleExtendedWearableNotification.show();
+    }
+
+    /**
+     * Launch the Pager Notification
+     */
+    public void createPagerNotification(View view) {
+        PagerNotification pagerNotification =
+                new PagerNotification(this);
+        pagerNotification.show();
     }
 }

@@ -22,7 +22,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="CreateStandardNotification"
+            android:onClick="createStandardNotification"
             android:text="@string/button_standard_notification"/>
 
         <TextView
@@ -34,7 +34,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="CreateBigTextStyleNotificaton"
+            android:onClick="createBigTextStyleNotificaton"
             android:text="@string/button_big_style_notification"/>
 
         <TextView
@@ -46,7 +46,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="CreateExtraActionNotification"
+            android:onClick="createExtraActionNotification"
             android:text="@string/button_extra_action_notification"/>
 
         <TextView
@@ -58,8 +58,20 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="CreateSimpleExtendedWearableNotification"
+            android:onClick="createSimpleExtendedWearableNotification"
             android:text="@string/button_simple_extended_wearable_notification"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_activity_text_view_top_margin"
+            android:text="@string/text_view_pager_notification"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="createPagerNotification"
+            android:text="@string/button_pager_notification"/>
 
     </LinearLayout>
 
