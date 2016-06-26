@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.androidnanodegree.cr.advancedwearablenotifications.util.ExtraActionNotification;
+import com.androidnanodegree.cr.advancedwearablenotifications.util.SimpleExtendedWearableNotification;
 import com.androidnanodegree.cr.advancedwearablenotifications.util.StandardNotification;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Launch the Standard Notification
      */
-    public void CreateStandardNotification(View view){
+    public void CreateStandardNotification(View view) {
         StandardNotification standardNotification = new StandardNotification(this);
         standardNotification.show();
     }
@@ -26,8 +27,17 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Launch the Extra Action Notification
      */
-    public void CreateExtraActionNotification(View view){
+    public void CreateExtraActionNotification(View view) {
         ExtraActionNotification extraActionNotification = new ExtraActionNotification(this);
         extraActionNotification.show();
+    }
+
+    /**
+     * Launch the Simple Extended Wearable Notification
+     */
+    public void CreateSimpleExtendedWearableNotification(View view) {
+        SimpleExtendedWearableNotification simpleExtendedWearableNotification =
+                new SimpleExtendedWearableNotification(this);
+        simpleExtendedWearableNotification.show();
     }
 }

@@ -15,7 +15,7 @@ import com.androidnanodegree.cr.advancedwearablenotifications.R;
  * Original code can be found at: https://github.com/googlesamples/android-BasicNotifications
  */
 
-public class ExtraActionNotification {
+public class SimpleExtendedWearableNotification {
     /**
      * A numeric value that identifies the notification that we'll be sending.
      * This value needs to be unique within this app, but it doesn't need to be
@@ -28,7 +28,7 @@ public class ExtraActionNotification {
      */
     private Context mContext;
 
-    public ExtraActionNotification(Context context){
+    public SimpleExtendedWearableNotification(Context context) {
         mContext = context;
     }
 
@@ -43,7 +43,7 @@ public class ExtraActionNotification {
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, intent, 0);
 
         /**
-         * Build an intent for an action to view a map
+         * Build an intent for an action to view a map that will only be shown on the phone
          */
         Intent mapIntent = new Intent(Intent.ACTION_VIEW);
         Uri geoUri = Uri.parse(
@@ -96,9 +96,15 @@ public class ExtraActionNotification {
          *    versions of Android prior to 4.2 will ignore this field, so don't use it for
          *    anything vital!
          */
-        builder.setContentTitle(mContext.getString(R.string.extra_action_notification_title));
-        builder.setContentText(mContext.getString(R.string.extra_action_notification_text));
-        builder.setSubText(mContext.getString(R.string.extra_action_notification_sub_text));
+        builder.setContentTitle(mContext.getString(
+                R.string.simple_extended_wearable_notification_title)
+        );
+        builder.setContentText(mContext.getString(
+                R.string.simple_extended_wearable_notification_text)
+        );
+        builder.setSubText(mContext.getString(
+                R.string.simple_extended_wearable_notification_sub_text)
+        );
 
         /**
          * Add the action of the notification.
@@ -109,6 +115,37 @@ public class ExtraActionNotification {
                 mContext.getString(R.string.extra_action_notification_action_text),
                 mapPendingIntent
         );
+
+        /**
+         *  Build a navigation Intent so that we can add to the action
+         */
+
+        Uri navigationUri = Uri.parse(
+                "google.navigation:q=" +
+                        mContext.getString(R.string.notification_location) +
+                        "&mode=d"
+        );
+        Intent navigationIntent = new Intent(Intent.ACTION_VIEW);
+        navigationIntent.setPackage("com.google.android.apps.maps");
+        navigationIntent.setData(navigationUri);
+        PendingIntent navigationPendingIntent =
+                PendingIntent.getActivity(mContext, 0, navigationIntent, 0);
+
+        /**
+         * Build the action so we can add it to the NotificationCompat.builder
+         */
+        NotificationCompat.Action navigationAction =
+                new NotificationCompat.Action.Builder(R.drawable.ic_directions,
+                        mContext.getString(
+                                R.string.simple_extended_wearable_notification_text
+                        ), navigationPendingIntent)
+                        .build();
+
+        /**
+         * Add the action to the WearableExtender so the action will only be shown
+         * on the wearable for easy navigation
+         */
+        builder.extend(new NotificationCompat.WearableExtender().addAction(navigationAction));
 
         /**
          * Send the notification. This will immediately display the notification icon in the
