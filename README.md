@@ -8,7 +8,7 @@ notifications shown on the phone and on Android Wearable devices.
 1. Install Android Studio
 2. New -> Project From Version Control -> GitHub
 3. Use the above URL as the Repository URL
-4. Setup your wearable to receive notifications. U can use this guide as a
+4. Setup your wearable to receive notifications. You can use this guide as a
 guidance: [Creating and Running a Wearable App]
 (https://developer.android.com/training/wearables/apps/creating.html)
 
